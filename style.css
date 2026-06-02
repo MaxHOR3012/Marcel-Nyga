@@ -632,7 +632,7 @@ select, option { color: var(--text); background: var(--dark3); }
   /* ---- Navigation ---- */
   .nav-links { display: none; }
   .hamburger { display: flex; }
-  .nav { padding: 14px 0; }
+  .nav { padding: 18px 0; }
   .logo-img { height: 54px; }
 
   /* ---- Hero ---- */
