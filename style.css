@@ -732,13 +732,13 @@ select, option { color: var(--text); background: var(--dark3); }
 .phone-frame {
   position: relative;
   width: 280px;
-  background: linear-gradient(160deg, #e8e8e8 0%, #c8c8c8 40%, #d4d4d4 100%);
+  background: linear-gradient(160deg, #2a2a2a 0%, #111 40%, #1c1c1c 100%);
   border-radius: 46px;
   padding: 5px;
   box-shadow:
-    0 0 0 1px rgba(255,255,255,0.9),
-    0 0 0 1.5px rgba(0,0,0,0.12),
-    inset 0 1px 2px rgba(255,255,255,0.8),
+    0 0 0 1px rgba(255,255,255,0.12),
+    0 0 0 1.5px rgba(0,0,0,0.5),
+    inset 0 1px 2px rgba(255,255,255,0.08),
     0 40px 100px rgba(0,0,0,0.5),
     0 10px 30px rgba(0,0,0,0.25);
   display: flex; flex-direction: column; align-items: stretch;
@@ -749,16 +749,16 @@ select, option { color: var(--text); background: var(--dark3); }
   content: '';
   position: absolute; left: -2.5px; top: 88px;
   width: 2.5px; height: 16px;
-  background: #b0b0b0;
+  background: #333;
   border-radius: 2px 0 0 2px;
-  box-shadow: 0 26px 0 #b0b0b0, 0 50px 0 #b0b0b0;
+  box-shadow: 0 26px 0 #333, 0 50px 0 #333;
 }
 /* Power-Button rechts */
 .phone-frame::after {
   content: '';
   position: absolute; right: -2.5px; top: 115px;
   width: 2.5px; height: 44px;
-  background: #b0b0b0;
+  background: #333;
   border-radius: 0 2px 2px 0;
 }
 
@@ -767,23 +767,19 @@ select, option { color: var(--text); background: var(--dark3); }
   background: #000;
   border-radius: 42px;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   position: relative;
 }
 
-/* Dynamic Island – schmale Pille */
+/* Dynamic Island – schmale Pille oben */
 .phone-notch {
   position: absolute;
-  top: 12px;
+  top: 14px;
   left: 50%;
   transform: translateX(-50%);
   width: 80px; height: 26px;
   background: #000;
   border-radius: 20px;
   z-index: 10;
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.06);
 }
 .phone-notch::after { display: none; }
 
@@ -791,33 +787,30 @@ select, option { color: var(--text); background: var(--dark3); }
 .phone-screen {
   width: 100%;
   background: #000;
-  aspect-ratio: 9/19.5;
   position: relative;
   overflow: hidden;
 }
-.phone-screen::after {
-  content: '';
-  position: absolute; inset: 0;
-  background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, transparent 40%);
-  pointer-events: none; z-index: 2;
-  border-radius: 42px;
-}
+.phone-screen::after { display: none; }
 .phone-screen iframe {
-  width: 100%; height: 100%;
-  border: none; display: block;
+  width: 100%;
+  height: 468px;
+  border: none;
+  display: block;
 }
 
-/* Home Indicator */
-.phone-home {
+/* Dynamic Island Bereich */
+.phone-screen-cover-top {
   position: absolute;
-  bottom: 8px; left: 50%;
-  transform: translateX(-50%);
-  width: 90px; height: 4px;
-  background: rgba(255,255,255,0.3);
-  border-radius: 3px;
+  top: 0; left: 0; right: 0;
+  height: 30px;
+  background: #000;
   z-index: 10;
 }
 
+.phone-screen-cover { display: none; }
+
+/* Home Indicator */
+.phone-home { display: none; }
 .phone-speaker { display: none; }
 
 @media (max-width: 900px) {
