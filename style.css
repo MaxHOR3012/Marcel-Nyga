@@ -726,107 +726,106 @@ select, option { color: var(--text); background: var(--dark3); }
 .instagram-text p { color: var(--text); line-height: 1.8; font-size: 0.95rem; }
 .instagram-embed-wrap { display: flex; justify-content: center; }
 
-/* ===== Handy Mockup ===== */
+/* ===== iPhone 17 Mockup ===== */
 .phone-mockup { display: flex; justify-content: center; padding: 20px 0; }
 
 .phone-frame {
   position: relative;
-  width: 290px;
-  background: linear-gradient(160deg, #3a3a3a 0%, #1c1c1c 40%, #111 100%);
+  width: 305px;
+  /* Titanium-Rahmen sehr dünn */
+  background: linear-gradient(160deg, #2a2a2a 0%, #111 40%, #1e1e1e 100%);
   border-radius: 50px;
-  padding: 16px 12px 20px;
+  padding: 6px;
   box-shadow:
-    0 0 0 1px #555,
-    0 0 0 3px #1a1a1a,
-    0 0 0 4px #444,
-    inset 0 1px 0 rgba(255,255,255,0.12),
-    inset 0 -1px 0 rgba(0,0,0,0.5),
-    0 40px 100px rgba(0,0,0,0.8),
-    0 10px 30px rgba(0,0,0,0.5);
-  display: flex; flex-direction: column; align-items: center; gap: 0;
+    inset 0 1px 0 rgba(255,255,255,0.7),
+    inset 0 -1px 0 rgba(0,0,0,0.15),
+    0 0 0 1px rgba(0,0,0,0.1),
+    0 40px 100px rgba(0,0,0,0.7),
+    0 10px 30px rgba(0,0,0,0.35);
+  display: flex; flex-direction: column; align-items: stretch;
 }
 
-/* Seitentasten links – Lautstärke */
+/* Action Button links */
 .phone-frame::before {
   content: '';
-  position: absolute; left: -4px; top: 90px;
-  width: 3px; height: 28px;
-  background: linear-gradient(to bottom, #444, #2a2a2a);
+  position: absolute; left: -2.5px; top: 95px;
+  width: 2.5px; height: 16px;
+  background: #333;
   border-radius: 2px 0 0 2px;
-  box-shadow: 0 36px 0 #333, 0 72px 0 #333;
+  box-shadow: 0 28px 0 #333, 0 52px 0 #333;
 }
-/* Seitentaste rechts – Power */
+/* Power-Button rechts */
 .phone-frame::after {
   content: '';
-  position: absolute; right: -4px; top: 110px;
-  width: 3px; height: 40px;
-  background: linear-gradient(to bottom, #444, #2a2a2a);
+  position: absolute; right: -2.5px; top: 120px;
+  width: 2.5px; height: 44px;
+  background: #333;
   border-radius: 0 2px 2px 0;
 }
 
-/* Dynamic Island */
-.phone-notch {
-  width: 110px; height: 30px;
+/* Schwarze Innenfläche (Screen-Bereich) */
+.phone-screen-wrap {
   background: #000;
-  border-radius: 0 0 20px 20px;
-  margin-bottom: 8px;
-  position: relative; z-index: 2;
-  display: flex; align-items: center; justify-content: center; gap: 8px;
-}
-.phone-notch::after {
-  content: '';
-  width: 10px; height: 10px;
-  background: radial-gradient(circle at 35% 35%, #2a2a2a, #000);
-  border-radius: 50%;
-  box-shadow: inset 0 0 3px rgba(100,160,255,0.3), 0 0 4px rgba(100,160,255,0.1);
+  border-radius: 45px;
+  overflow: hidden;
+  position: relative;
+  display: block;
 }
 
-/* Bildschirm */
+/* Dynamic Island – kleine Pille direkt im Screen */
+.phone-notch {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 86px; height: 28px;
+  background: #000;
+  border-radius: 20px;
+  z-index: 10;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.05);
+}
+.phone-notch::after { display: none; }
+
+/* Screen füllt fast die gesamte Vorderseite */
 .phone-screen {
   width: 100%;
-  border-radius: 6px;
-  overflow: hidden;
+  aspect-ratio: 9/19.8;
   background: #000;
-  aspect-ratio: 9/16;
   position: relative;
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05);
+  overflow: hidden;
 }
-.phone-screen::after {
-  content: '';
-  position: absolute; inset: 0;
-  background: linear-gradient(135deg, rgba(255,255,255,0.04) 0%, transparent 50%);
-  pointer-events: none; z-index: 1;
-}
+.phone-screen::after { display: none; }
 .phone-screen iframe {
   width: 100%; height: 100%;
   border: none; display: block;
 }
 
-/* Home Indicator */
+/* Home Indicator – schwarzer Abschluss unten */
 .phone-home {
-  width: 120px; height: 5px;
-  background: rgba(255,255,255,0.18);
+  display: block;
+  width: 100%;
+  height: 28px;
+  background: #000;
+  flex-shrink: 0;
+  position: relative;
+}
+.phone-home::after {
+  content: '';
+  position: absolute;
+  bottom: 8px; left: 50%;
+  transform: translateX(-50%);
+  width: 90px; height: 4px;
+  background: rgba(255,255,255,0.25);
   border-radius: 3px;
-  margin-top: 10px;
 }
 
-/* Lautsprecher unten */
-.phone-speaker {
-  width: 60px; height: 5px; margin-top: 2px; margin-bottom: -4px;
-  background: repeating-linear-gradient(
-    90deg, rgba(255,255,255,0.12) 0px, rgba(255,255,255,0.12) 3px,
-    transparent 3px, transparent 6px
-  );
-  border-radius: 3px;
-}
-
-.phone-screen-wrap { display: contents; }
+.phone-speaker { display: none; }
 .phone-screen-cover-top { display: none; }
 .phone-screen-cover { display: none; }
 
 @media (max-width: 900px) {
   .instagram-grid { grid-template-columns: 1fr; gap: 40px; }
-  .phone-frame { width: 240px; }
+  .phone-frame { width: 235px; }
 }
 
 /* ===== Atmosphäre Bild-Sektion ===== */
