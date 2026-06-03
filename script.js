@@ -1,3 +1,13 @@
+// Search-Field: ganzes Feld klickbar + Wert anzeigen
+['hero-ort', 'hero-typ', 'hero-preis'].forEach(id => {
+  const sel = document.getElementById(id);
+  const val = document.getElementById(id + '-val');
+  if (!sel || !val) return;
+  sel.addEventListener('change', () => {
+    val.textContent = sel.options[sel.selectedIndex].text;
+  });
+});
+
 // Header scroll effect
 const header = document.getElementById('header');
 window.addEventListener('scroll', () => {

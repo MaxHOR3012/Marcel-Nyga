@@ -141,7 +141,8 @@
         </div>
         <form class="search-form" id="heroSearchForm">
           <div class="search-field">
-            <label>Region</label>
+            <label for="hero-ort">Region</label>
+            <span class="select-value" id="hero-ort-val">Alle Regionen</span>
             <select name="ort" id="hero-ort">
               <option value="">Alle Regionen</option>
               <option value="lahn-dill">Lahn-Dill-Kreis</option>
@@ -152,7 +153,8 @@
             </select>
           </div>
           <div class="search-field">
-            <label>Immobilientyp</label>
+            <label for="hero-typ">Immobilientyp</label>
+            <span class="select-value" id="hero-typ-val">Alle Typen</span>
             <select name="typ" id="hero-typ">
               <option value="">Alle Typen</option>
               <option value="wohnung">Wohnung</option>
@@ -161,7 +163,8 @@
             </select>
           </div>
           <div class="search-field">
-            <label>Max. Preis</label>
+            <label for="hero-preis">Max. Preis</label>
+            <span class="select-value" id="hero-preis-val">Kein Limit</span>
             <select name="preis" id="hero-preis">
               <option value="">Kein Limit</option>
               <option value="400000">bis 400.000 €</option>
