@@ -384,6 +384,19 @@ select, option { color: var(--text); background: var(--dark3); }
 
 .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; background: transparent; border: none; }
 .cards-grid--2x2 { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.cards-grid--3col { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+
+/* Hellere Karten für Eigentümer */
+.card--hell {
+  background: #2e2e2e;
+  border-color: rgba(192,150,82,0.4);
+}
+.card--hell:hover { background: #363636; }
+.card--hell p { color: var(--text); }
+
+@media (max-width: 768px) {
+  .cards-grid--3col { grid-template-columns: 1fr; }
+}
 .card {
   background: var(--dark3); padding: 36px 30px;
   transition: all var(--transition); display: flex; flex-direction: column; gap: 10px;
