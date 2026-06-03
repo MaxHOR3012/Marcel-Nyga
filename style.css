@@ -732,6 +732,50 @@ select, option { color: var(--text); background: var(--dark3); }
   .whatsapp-fab svg { width: 24px; height: 24px; }
 }
 
+/* ===== Referenzen Video-Section ===== */
+.referenzen-section { background: var(--bg2); border-top: 1px solid var(--border); }
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 28px;
+  margin-bottom: 8px;
+}
+.video-card {
+  background: var(--dark3);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.video-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.video-wrap {
+  position: relative;
+  padding-top: 56.25%;
+  background: #000;
+}
+.video-wrap video {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.video-info { padding: 20px 22px; }
+.video-info h3 {
+  font-family: var(--font-script); font-size: 1.5rem;
+  color: var(--gold); font-weight: 400; margin-bottom: 6px;
+}
+.video-info p { color: var(--text-light); font-size: 0.88rem; line-height: 1.65; }
+.video-tag {
+  display: inline-block; margin-top: 10px;
+  font-size: 0.65rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.14em; color: var(--gold); font-family: var(--font-heading);
+}
+
+@media (max-width: 768px) {
+  .video-grid { grid-template-columns: 1fr; gap: 16px; }
+}
+
 /* ===== Instagram Sektion ===== */
 .instagram-section { background: var(--bg2); border-top: 1px solid var(--border); }
 .instagram-grid {
