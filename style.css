@@ -652,7 +652,7 @@ select, option { color: var(--text); background: var(--dark3); }
   .logo-img { height: 54px; }
 
   /* ---- Hero ---- */
-  .hero-content { padding-top: 72px; }
+  .hero-content { padding-top: 100px; }
   .hero-sub { font-size: 0.95rem; margin-bottom: 26px; text-shadow: 0 1px 10px rgba(0,0,0,0.7); }
   .hero-cta { flex-direction: column; align-items: stretch; gap: 10px; }
   .hero-cta .btn { width: 100%; text-align: center; }
