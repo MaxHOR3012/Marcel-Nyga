@@ -272,7 +272,7 @@ select, option { color: var(--text); background: var(--dark3); }
 .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 16px; }
 
 .hero-stats-wrap {
-  position: relative; z-index: 2; padding-bottom: 40px; margin-top: 58vh;
+  position: relative; z-index: 2; padding-bottom: 40px; margin-top: 72vh;
 }
 .hero-stats {
   display: inline-flex; align-items: stretch;
