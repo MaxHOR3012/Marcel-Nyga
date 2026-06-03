@@ -269,15 +269,7 @@ select, option { color: var(--text); background: var(--dark3); }
   text-shadow: 0 1px 8px rgba(0,0,0,0.55);
   font-family: var(--font-heading); font-weight: 500; letter-spacing: 0.01em;
 }
-/* Hero Bottom: Buttons + Stats nebeneinander */
-.hero-bottom {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  margin-top: 8px;
-}
-.hero-cta { display: flex; gap: 14px; flex-wrap: wrap; flex-shrink: 0; }
+.hero-cta { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 16px; }
 
 .hero-stats-wrap {
   position: relative; z-index: 2; padding-bottom: 40px; margin-top: 45vh;
@@ -662,7 +654,6 @@ select, option { color: var(--text); background: var(--dark3); }
   /* ---- Hero ---- */
   .hero-content { padding-top: 72px; }
   .hero-sub { font-size: 0.95rem; margin-bottom: 26px; text-shadow: 0 1px 10px rgba(0,0,0,0.7); }
-  .hero-bottom { flex-direction: column; align-items: stretch; gap: 16px; }
   .hero-cta { flex-direction: column; align-items: stretch; gap: 10px; }
   .hero-cta .btn { width: 100%; text-align: center; }
   .hero-stats {
