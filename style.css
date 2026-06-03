@@ -60,7 +60,7 @@ h1, h2, h3, h4 {
 /* Handschrift nur für große Überschriften */
 h1, h2 {
   font-family: var(--font-script);
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.01em;
 }
 h1 { font-size: clamp(2.4rem, 5vw, 4rem); }
@@ -357,10 +357,10 @@ select, option { color: var(--text); background: var(--dark3); }
 .prozess { border-top: 1px solid var(--border); }
 
 .leistungen { background: var(--bg2); }
-.leistungen-gruppe { margin-bottom: 52px; }
+.leistungen-gruppe { margin-bottom: 88px; }
 .leistungen-gruppe:last-child { margin-bottom: 0; }
 .gruppe-titel {
-  font-family: var(--font-heading); font-size: 0.68rem; font-weight: 800;
+  font-family: var(--font-heading); font-size: 0.9rem; font-weight: 800;
   text-transform: uppercase; letter-spacing: 0.2em; color: var(--gold);
   margin-bottom: 24px; padding-bottom: 14px;
   border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 12px;
@@ -383,8 +383,8 @@ select, option { color: var(--text); background: var(--dark3); }
 .card:hover { background: var(--dark4); }
 .card-icon { font-size: 1.8rem; margin-bottom: 4px; }
 .card h3 {
-  font-family: var(--font-script); font-size: 1.4rem; letter-spacing: 0.01em;
-  color: var(--gold); font-weight: 600; line-height: 1.2;
+  font-family: var(--font-script); font-size: 2rem; letter-spacing: 0.01em;
+  color: var(--gold); font-weight: 400; line-height: 1.2;
 }
 .card p { color: var(--text-light); font-size: 0.88rem; flex: 1; line-height: 1.75; }
 .card-link {
@@ -479,8 +479,9 @@ select, option { color: var(--text); background: var(--dark3); }
 .ueber-uns-text p { color: var(--text-light); font-size: 0.93rem; line-height: 1.85; }
 .ueber-uns-quote {
   border-left: 3px solid var(--gold); padding-left: 20px; margin: 6px 0;
-  font-family: var(--font-script); font-style: italic; font-size: 1.15rem;
-  color: var(--gold); line-height: 1.65; font-weight: 400;
+  font-family: var(--font-script); font-style: normal; font-size: 1.7rem;
+  color: var(--white); line-height: 1.65; font-weight: 400;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.4);
 }
 .ueber-uns-list { display: flex; flex-direction: column; gap: 9px; }
 .ueber-uns-list li {
