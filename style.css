@@ -905,14 +905,7 @@ select, option { color: var(--text); background: var(--dark3); }
 
 .phone-speaker { display: none; }
 /* Profilbereich oben überdecken */
-.phone-screen-cover-top {
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 80px;
-  background: #000;
-  z-index: 5;
-  pointer-events: none;
-}
+.phone-screen-cover-top { display: none; }
 .phone-screen-cover { display: none; }
 
 @media (max-width: 900px) {
