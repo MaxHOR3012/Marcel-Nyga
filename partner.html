@@ -2,55 +2,9 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Referenzen – Marcel Nyga Immobilienmanagement</title>
+  <title>Partner – Marcel Nyga Immobilienmanagement</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" /><link rel="stylesheet" href="subpage.css" />
-  <style>
-    .referenzen-intro { text-align: center; max-width: 680px; margin: 0 auto 60px; }
-    .referenzen-intro p { color: var(--text-light); font-size: 0.95rem; line-height: 1.8; margin-top: 14px; }
-
-    /* Video Grid */
-    .video-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 28px;
-      margin-bottom: 64px;
-    }
-    .video-card {
-      background: var(--dark3);
-      border: 1px solid var(--border-gold);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      transition: transform var(--transition), box-shadow var(--transition);
-    }
-    .video-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-    .video-wrap {
-      position: relative;
-      padding-top: 56.25%; /* 16:9 */
-      background: #000;
-    }
-    .video-wrap video {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      object-fit: cover;
-    }
-    .video-info { padding: 20px 22px; }
-    .video-info h3 {
-      font-family: var(--font-script); font-size: 1.5rem;
-      color: var(--gold); font-weight: 400; margin-bottom: 6px;
-    }
-    .video-info p { color: var(--text-light); font-size: 0.88rem; line-height: 1.65; }
-    .video-tag {
-      display: inline-block; margin-top: 10px;
-      font-size: 0.65rem; font-weight: 700; text-transform: uppercase;
-      letter-spacing: 0.14em; color: var(--gold); font-family: var(--font-heading);
-    }
-
-    @media (max-width: 768px) {
-      .video-grid { grid-template-columns: 1fr; gap: 20px; }
-    }
-  </style>
 </head>
 <body>
   <header class="header scrolled" id="header">
@@ -59,11 +13,12 @@
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li class="has-dropdown"><a href="#">Immobilien</a><ul class="dropdown"><li><a href="lahn-dill.html">Immobilien Lahn-Dill-Kreis</a></li><li><a href="mallorca.html">Immo Mallorca</a></li><li><a href="suchauftrag.html">Suchauftrag</a></li></ul></li>
-        <li class="has-dropdown"><a href="#">Eigentümer</a><ul class="dropdown"><li><a href="verkauf.html">Immo Verkauf</a></li><li><a href="vermietung.html">Immo Vermietung</a></li><li><a href="wertgutachten.html">Wertgutachten</a></li><li><a href="mietverwaltung.html">Mietverwaltung</a></li></ul></li>
+        <li class="has-dropdown"><a href="#">Eigentümer</a><ul class="dropdown"><li><a href="verkauf.html">Immo Verkauf</a></li><li><a href="vermietung.html">Immo Vermietung</a></li><li><a href="wertgutachten.html">Wertgutachten</a></li></ul></li>
         <li class="has-dropdown"><a href="#">Service</a><ul class="dropdown"><li><a href="bewertung.html">Immo Bewertung</a></li><li><a href="energieausweis.html">Energieausweis</a></li><li><a href="baufinanzierung.html">Baufinanzierung</a></li><li><a href="baubetreuung.html">Baubetreuung</a></li></ul></li>
         <li class="has-dropdown"><a href="#">Kontakt</a><ul class="dropdown"><li><a href="index.html#kontakt">Anfrage</a></li><li><a href="buero.html">Büro &amp; Anfahrt</a></li></ul></li>
         <li><a href="ueber-mich.html">Über mich</a></li>
-        <li><a href="referenzen.html" style="color:var(--gold)">Referenzen</a></li>
+        <li><a href="partner.html" style="color:var(--gold)">Partner</a></li>
+        <li><a href="referenzen.html">Referenzen</a></li>
         <li><a href="index.html#kontakt" class="btn btn-nav">Kontakt</a></li>
       </ul>
       <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
@@ -85,7 +40,6 @@
             <li><a href="verkauf.html">Immo Verkauf</a></li>
             <li><a href="vermietung.html">Immo Vermietung</a></li>
             <li><a href="wertgutachten.html">Wertgutachten</a></li>
-            <li><a href="mietverwaltung.html">Mietverwaltung</a></li>
           </ul>
         </li>
         <li class="mobile-has-dropdown">
@@ -105,74 +59,50 @@
           </ul>
         </li>
         <li><a href="ueber-mich.html">Über mich</a></li>
-        <li><a href="partner.html">Partner</a></li><li><a href="referenzen.html">Referenzen</a></li>
+        <li><a href="partner.html">Partner</a></li>
+        <li><a href="referenzen.html">Referenzen</a></li>
         <li><a href="index.html#kontakt" class="mobile-cta-btn">Kontakt aufnehmen</a></li>
       </ul>
     </div>
   </header>
 
-  <!-- Hero Banner -->
-  <section class="page-hero" style="background-image:url('marcel-nyga.jpg')">
+  <section class="page-hero" style="background-image:url('monolit-beach-house-4.jpg')">
     <div class="page-hero-overlay"></div>
     <div class="container page-hero-content">
-      <p class="section-tag">Erfolge &amp; Einblicke</p>
-      <h1>Referenzen</h1>
-      <p>Sehen Sie selbst – echte Objekte, echte Ergebnisse.</p>
+      <p class="section-tag">Netzwerk &amp; Kooperationen</p>
+      <h1>Partner</h1>
+      <p>Starke Partner für Ihren Immobilienerfolg.</p>
     </div>
   </section>
 
-  <!-- Video Referenzen -->
-  <section class="section" style="background: var(--bg);">
+  <section class="subpage-content section">
     <div class="container">
-      <div class="referenzen-intro">
-        <p class="section-tag">Meine Arbeit</p>
-        <h2>Verkaufte Immobilien</h2>
-        <p>Ein Blick hinter die Kulissen – von der ersten Besichtigung bis zur Schlüsselübergabe. Diese Videos zeigen ausgewählte Objekte, die ich erfolgreich vermittelt habe.</p>
+      <div class="section-header">
+        <p class="section-tag">Unser Netzwerk</p>
+        <h2>Unsere Partner</h2>
+        <p class="section-sub">Für eine rundum erfolgreiche Immobilientransaktion arbeite ich mit ausgewählten, zuverlässigen Partnern zusammen.</p>
       </div>
-
-      <div class="video-grid" id="videoGrid">
-        <!-- Videos werden automatisch geladen -->
-      </div>
-
-      <div class="section-cta">
-        <a href="index.html#kontakt" class="btn btn-primary">Ihr Objekt verkaufen</a>
-        <a href="lahn-dill.html" class="btn btn-outline">Aktuelle Angebote</a>
+      <div class="cards-grid" style="margin-top: 40px;">
+        <!-- Partner werden hier eingefügt -->
+        <div class="card" style="text-align:center; padding: 48px 30px;">
+          <p style="color:var(--text-light); font-size:0.95rem;">Partner werden in Kürze vorgestellt.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="logo"><img src="logo.png" alt="Marcel Nyga" class="logo-img logo-img--footer" /></a>
         <p>Ihr persönlicher Makler im Lahn-Dill-Kreis und auf Mallorca.</p>
       </div>
-      <div class="footer-col">
-        <h4>Immobilien</h4>
-        <ul>
-          <li><a href="lahn-dill.html">Lahn-Dill-Kreis</a></li>
-          <li><a href="mallorca.html">Mallorca</a></li>
-          <li><a href="suchauftrag.html">Suchauftrag</a></li>
-          <li><a href="referenzen.html">Referenzen</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Eigentümer</h4>
-        <ul>
-          <li><a href="verkauf.html">Verkauf</a></li>
-          <li><a href="vermietung.html">Vermietung</a></li>
-          <li><a href="wertgutachten.html">Wertgutachten</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Kontakt</h4>
-        <ul>
-          <li><a href="index.html#kontakt">Anfrage</a></li>
-          <li><a href="buero.html">Büro &amp; Anfahrt</a></li>
-          <li><a href="ueber-mich.html">Über mich</a></li>
-        </ul>
-      </div>
+      <div class="footer-col"><h4>Seiten</h4><ul>
+        <li><a href="ueber-mich.html">Über mich</a></li>
+        <li><a href="partner.html">Partner</a></li>
+        <li><a href="referenzen.html">Referenzen</a></li>
+        <li><a href="buero.html">Büro &amp; Anfahrt</a></li>
+      </ul></div>
     </div>
     <div class="container footer-bottom">
       <span>© 2025 <strong>Marcel Nyga Immobilienmanagement</strong></span>
@@ -181,36 +111,6 @@
   </footer>
 
   <a href="https://wa.me/491606101982" class="whatsapp-fab" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
-
   <script src="script.js"></script>
-  <script>
-    // Videos automatisch aus dem Ordner laden
-    const videoFiles = [
-      // Hier kommen deine Video-Dateinamen rein, sobald du sie in den Ordner legst
-      // Beispiel: { file: 'video1.mp4', titel: 'Einfamilienhaus Herborn', ort: 'Herborn', typ: 'Verkauft' }
-    ];
-
-    const grid = document.getElementById('videoGrid');
-
-    if (videoFiles.length === 0) {
-      grid.innerHTML = '<p style="color:var(--text-light);text-align:center;grid-column:1/-1;padding:40px 0;">Videos werden in Kürze hinzugefügt.</p>';
-    } else {
-      videoFiles.forEach(v => {
-        grid.innerHTML += `
-          <div class="video-card">
-            <div class="video-wrap">
-              <video controls playsinline preload="metadata" poster="">
-                <source src="${v.file}" type="video/mp4">
-              </video>
-            </div>
-            <div class="video-info">
-              <h3>${v.titel}</h3>
-              <p>${v.ort}</p>
-              <span class="video-tag">${v.typ}</span>
-            </div>
-          </div>`;
-      });
-    }
-  </script>
 </body>
 </html>
