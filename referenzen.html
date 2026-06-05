@@ -221,7 +221,7 @@
     const grid = document.getElementById('videoGrid');
 
     if (videoFiles.length === 0) {
-      grid.innerHTML = '<p style="color:var(--text-light);text-align:center;grid-column:1/-1;padding:40px 0;">Videos werden in Kürze hinzugefügt.</p>';
+      grid.style.display = 'none';
     } else {
       videoFiles.forEach(v => {
         grid.innerHTML += `
