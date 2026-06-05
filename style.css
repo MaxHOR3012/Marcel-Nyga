@@ -496,7 +496,7 @@ select, option { color: var(--text); background: var(--dark3); }
 /* ===== Über uns ===== */
 .ueber-uns { background: var(--bg2); }
 .ueber-uns-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-.img-frame { height: 540px; background-size: cover; background-position: center 15%; }
+.img-frame { height: 620px; background-size: cover; background-position: center 25%; }
 .ueber-uns-img { position: relative; }
 .img-badge {
   position: absolute; bottom: -20px; right: -20px;
