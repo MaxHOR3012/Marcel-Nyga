@@ -761,8 +761,8 @@ select, option { color: var(--text); background: var(--dark3); }
 
 .video-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 28px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
   margin-bottom: 8px;
 }
 .video-card {
@@ -775,7 +775,7 @@ select, option { color: var(--text); background: var(--dark3); }
 .video-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 .video-wrap {
   position: relative;
-  padding-top: 56.25%;
+  padding-top: 65%;
   background: #000;
 }
 .video-wrap video {
