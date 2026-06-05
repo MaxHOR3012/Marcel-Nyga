@@ -990,6 +990,34 @@ select, option { color: var(--text); background: var(--dark3); }
   .suche-btn { grid-column: span 2; }
 }
 
+/* ===== Foto Galerie ===== */
+.foto-galerie {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 8px;
+}
+.foto-item {
+  overflow: hidden;
+  border-radius: var(--radius);
+  aspect-ratio: 4/3;
+  background: var(--dark3);
+  border: 1px solid var(--border);
+}
+.foto-item img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+  transition: transform 0.4s ease;
+}
+.foto-item:hover img { transform: scale(1.05); }
+
+@media (max-width: 768px) {
+  .foto-galerie { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+}
+@media (max-width: 480px) {
+  .foto-galerie { grid-template-columns: 1fr; }
+}
+
 /* ===== WhatsApp FAB ===== */
 .whatsapp-fab {
   position: fixed; bottom: 28px; right: 28px; z-index: 999;
