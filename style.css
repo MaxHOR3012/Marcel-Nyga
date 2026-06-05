@@ -398,7 +398,7 @@ select, option { color: var(--text); background: var(--dark3); }
   .cards-grid--3col { grid-template-columns: 1fr; }
 }
 .card {
-  background: var(--dark3); padding: 36px 30px;
+  background: #2a2a2a; padding: 36px 30px;
   transition: all var(--transition); display: flex; flex-direction: column; gap: 10px;
   position: relative; border: 1px solid var(--border-gold);
   border-radius: var(--radius);
