@@ -46,9 +46,10 @@ mobileMenu.querySelectorAll('.mobile-dropdown a').forEach(link => {
 // Dropdown: auf Mobile/Touch per Klick öffnen
 document.querySelectorAll('.has-dropdown > a').forEach(link => {
   link.addEventListener('click', (e) => {
+    // Wenn der Link ein echtes Ziel hat (nicht #), navigiere direkt
+    if (link.getAttribute('href') !== '#') return;
     const parent = link.parentElement;
     const isOpen = parent.classList.contains('open');
-    // Alle anderen schließen
     document.querySelectorAll('.has-dropdown').forEach(d => d.classList.remove('open'));
     if (!isOpen) {
       e.preventDefault();
