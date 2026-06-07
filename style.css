@@ -778,8 +778,7 @@ select, option { color: var(--text); background: var(--dark3); }
 
 .video-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 300px));
-  justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
   gap: 32px;
   margin-bottom: 8px;
 }
@@ -793,14 +792,14 @@ select, option { color: var(--text); background: var(--dark3); }
 .video-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 .video-wrap {
   position: relative;
-  aspect-ratio: 9 / 16;
+  padding-top: 65%;
   background: #000;
 }
 .video-wrap video {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 .video-info { padding: 20px 22px; }
 .video-info h3 {
@@ -815,7 +814,7 @@ select, option { color: var(--text); background: var(--dark3); }
 }
 
 @media (max-width: 768px) {
-  .video-grid { grid-template-columns: minmax(0, 320px); justify-content: center; gap: 16px; }
+  .video-grid { grid-template-columns: 1fr; gap: 16px; }
 }
 
 /* ===== Instagram Sektion ===== */
