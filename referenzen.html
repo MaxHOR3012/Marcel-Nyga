@@ -28,13 +28,14 @@
     .video-wrap {
       position: relative;
       aspect-ratio: 9 / 16; /* Hochformat-Reels vollständig zeigen */
+      padding-top: 0; /* globale .video-wrap-Regel (65%) neutralisieren */
       background: #000;
     }
     .video-wrap video {
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      object-fit: cover;
+      object-fit: contain; /* gesamtes Hochformat-Video zeigen, kein Beschnitt */
     }
     .video-info { padding: 20px 22px; }
     .video-info h3 {
