@@ -657,7 +657,7 @@ select, option { color: var(--text); background: var(--dark3); }
 /* ===== Responsive ===== */
 @media (max-width: 1024px) {
   .ueber-uns-grid, .kontakt-grid { grid-template-columns: 1fr; gap: 48px; }
-  .img-frame { height: 360px; }
+  .img-frame { height: auto; aspect-ratio: 4 / 5; max-height: 560px; }
   .img-badge { right: 12px; bottom: -12px; }
   .prozess-steps { grid-template-columns: 1fr 1fr; gap: 28px; }
   .prozess-arrow { display: none; }
@@ -742,7 +742,7 @@ select, option { color: var(--text); background: var(--dark3); }
 
   /* ---- Über uns ---- */
   .ueber-uns-grid { grid-template-columns: 1fr; gap: 32px; }
-  .img-frame { height: 280px; }
+  .img-frame { height: auto; aspect-ratio: 4 / 5; }
   .img-badge { right: 12px; bottom: -12px; padding: 14px 18px; }
   .img-badge strong { font-size: 1.6rem; }
 
