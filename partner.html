@@ -5,6 +5,15 @@
   <title>Partner – Marcel Nyga Immobilienmanagement</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" /><link rel="stylesheet" href="subpage.css" />
+  <style>
+    /* Plattform-Markennamen klar lesbar (statt Schreibschrift) */
+    .platform-grid .card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+  </style>
 </head>
 <body>
   <header class="header scrolled" id="header">
@@ -89,7 +98,7 @@
       </div>
       <!-- Immobilien auf Plattformen -->
       <h3 class="gruppe-titel" style="margin-top: 40px;">Meine Immobilien auf Plattformen</h3>
-      <div class="cards-grid cards-grid--2x2">
+      <div class="cards-grid cards-grid--2x2 platform-grid">
         <a class="card card--hell" href="https://www.immobilienscout24.de/anbieter/profil/marcel-nyga-immobilienmanagement/marcel-nyga" target="_blank" rel="noopener">
           <h3>ImmoScout24</h3>
           <p>Alle meine aktuellen Angebote auf ImmoScout24 ansehen.</p>
