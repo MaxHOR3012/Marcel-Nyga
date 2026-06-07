@@ -12,7 +12,8 @@
     /* Video Grid */
     .video-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 300px));
+      justify-content: center;
       gap: 28px;
       margin-bottom: 64px;
     }
@@ -26,7 +27,7 @@
     .video-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
     .video-wrap {
       position: relative;
-      padding-top: 56.25%; /* 16:9 */
+      aspect-ratio: 9 / 16; /* Hochformat-Reels vollständig zeigen */
       background: #000;
     }
     .video-wrap video {
@@ -48,7 +49,7 @@
     }
 
     @media (max-width: 768px) {
-      .video-grid { grid-template-columns: 1fr; gap: 20px; }
+      .video-grid { grid-template-columns: minmax(0, 320px); justify-content: center; gap: 20px; }
     }
   </style>
 </head>
@@ -59,7 +60,7 @@
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li class="has-dropdown"><a href="#">Immobilien</a><ul class="dropdown"><li><a href="lahn-dill.html">Immobilien Lahn-Dill-Kreis</a></li><li><a href="mallorca.html">Immo Mallorca</a></li><li><a href="suchauftrag.html">Suchauftrag</a></li></ul></li>
-        <li class="has-dropdown"><a href="#">Eigentümer</a><ul class="dropdown"><li><a href="verkauf.html">Immo Verkauf</a></li><li><a href="vermietung.html">Immo Vermietung</a></li><li><a href="wertgutachten.html">Marktwertanalyse</a></li><li><a href="mietverwaltung.html">Mietverwaltung</a></li></ul></li>
+        <li class="has-dropdown"><a href="#">Eigentümer</a><ul class="dropdown"><li><a href="verkauf.html">Immo Verkauf</a></li><li><a href="vermietung.html">Immo Vermietung</a></li><li><a href="wertgutachten.html">Marktwertanalyse</a></li></ul></li>
         <li class="has-dropdown"><a href="#">Service</a><ul class="dropdown"><li><a href="bewertung.html">Immo Bewertung</a></li><li><a href="energieausweis.html">Energieausweis</a></li><li><a href="baufinanzierung.html">Baufinanzierung</a></li><li><a href="baubetreuung.html">Baubetreuung</a></li></ul></li>
         <li class="has-dropdown"><a href="#">Kontakt</a><ul class="dropdown"><li><a href="index.html#kontakt">Anfrage</a></li><li><a href="buero.html">Büro &amp; Anfahrt</a></li></ul></li>
         <li><a href="ueber-mich.html">Über mich</a></li>
@@ -85,7 +86,6 @@
             <li><a href="verkauf.html">Immo Verkauf</a></li>
             <li><a href="vermietung.html">Immo Vermietung</a></li>
             <li><a href="wertgutachten.html">Marktwertanalyse</a></li>
-            <li><a href="mietverwaltung.html">Mietverwaltung</a></li>
           </ul>
         </li>
         <li class="mobile-has-dropdown">
@@ -104,7 +104,8 @@
             <li><a href="buero.html">Büro &amp; Anfahrt</a></li>
           </ul>
         </li>
-        <li class="has-dropdown"><a href="ueber-mich.html">Über mich</a><ul class="dropdown"><li><a href="ueber-mich.html">Über mich</a></li><li><a href="partner.html">Partner</a></li></ul></li><li><a href="referenzen.html">Referenzen</a></li>
+        <li><a href="ueber-mich.html">Über mich</a></li>
+        <li><a href="referenzen.html">Referenzen</a></li>
         <li><a href="index.html#kontakt" class="mobile-cta-btn">Kontakt aufnehmen</a></li>
       </ul>
     </div>
@@ -213,8 +214,8 @@
   <script>
     // Videos automatisch aus dem Ordner laden
     const videoFiles = [
-      // Hier kommen deine Video-Dateinamen rein, sobald du sie in den Ordner legst
-      // Beispiel: { file: 'video1.mp4', titel: 'Einfamilienhaus Herborn', ort: 'Herborn', typ: 'Verkauft' }
+      { file: 'Video-Sinn-2.mov', titel: 'Sinn', ort: 'Lahn-Dill-Kreis', typ: 'Referenz' },
+      { file: 'Immovideo-Uckersdorf-1.mov', titel: 'Uckersdorf', ort: 'Lahn-Dill-Kreis', typ: 'Referenz' },
     ];
 
     const grid = document.getElementById('videoGrid');
@@ -226,7 +227,8 @@
         grid.innerHTML += `
           <div class="video-card">
             <div class="video-wrap">
-              <video controls playsinline preload="metadata" poster="">
+              <video controls autoplay muted loop playsinline preload="auto">
+                <source src="${v.file}" type="video/quicktime">
                 <source src="${v.file}" type="video/mp4">
               </video>
             </div>
