@@ -38,9 +38,12 @@
     .koop-grid { align-items: start; }
     .koop-grid > .card { min-height: 252px; }
     .koop-grid > a.card .card-link { margin-top: auto; }
-    /* Elias (Spalte 1) und Winkler (Spalte 2, oben) gleich hoch; Lucas darunter in Spalte 2 */
-    .koop-grid > .koop-col2-bottom { grid-column: 2; }
-    @media (max-width: 768px) { .koop-grid > .koop-col2-bottom { grid-column: 1; } }
+    /* Rechte Spalte: Winkler oben, Lucas darunter – unabhängig von Elias.
+       Aufklappen von Elias verschiebt Lucas dadurch NICHT. */
+    .koop-stack { display: flex; flex-direction: column; gap: 12px; }
+    .koop-stack > .card { display: flex; flex-direction: column; }
+    .koop-stack > .card .card-link { margin-top: auto; }
+    .koop-stack > .card:first-child { min-height: 252px; } /* Winkler = Höhe von Elias */
   </style>
 </head>
 <body>
@@ -172,16 +175,18 @@
             </a>
           </details>
         </div>
-        <a class="card" href="https://baufinanzierung-winkler.de/" target="_blank" rel="noopener">
-          <div class="logo-chip"><img src="Winkler-Logo-100.png" alt="Baufinanzierung Kirsten Winkler" /></div>
-          <p>Baufinanzierung aus Gießen – kompetente Beratung rund um die Finanzierung Ihrer Immobilie.</p>
-          <span class="card-link">Zur Website →</span>
-        </a>
-        <a class="card koop-col2-bottom" href="https://www.lucasfroeserealestate.com" target="_blank" rel="noopener">
-          <img src="lucasfroeserealestate_512x.png.webp" alt="Lucas Froese Real Estate" style="width: 100%; max-width: 230px; height: auto; background: #fff; padding: 14px 16px; border-radius: 6px;" />
-          <p style="margin-top: 16px;">Kooperationspartner rund um die Immobilie.</p>
-          <span class="card-link">Zur Website →</span>
-        </a>
+        <div class="koop-stack">
+          <a class="card" href="https://baufinanzierung-winkler.de/" target="_blank" rel="noopener">
+            <div class="logo-chip"><img src="Winkler-Logo-100.png" alt="Baufinanzierung Kirsten Winkler" /></div>
+            <p>Baufinanzierung aus Gießen – kompetente Beratung rund um die Finanzierung Ihrer Immobilie.</p>
+            <span class="card-link">Zur Website →</span>
+          </a>
+          <a class="card" href="https://www.lucasfroeserealestate.com" target="_blank" rel="noopener">
+            <img src="lucasfroeserealestate_512x.png.webp" alt="Lucas Froese Real Estate" style="width: 100%; max-width: 230px; height: auto; background: #fff; padding: 14px 16px; border-radius: 6px;" />
+            <p style="margin-top: 16px;">Kooperationspartner rund um die Immobilie.</p>
+            <span class="card-link">Zur Website →</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
