@@ -95,6 +95,7 @@
             <option value="haus">Haus</option>
             <option value="wohnung">Wohnung</option>
             <option value="grundstueck">Grundstück</option>
+            <option value="gewerbe">Gewerbe</option>
           </select>
         </div>
         <div class="suche-field">
@@ -146,7 +147,16 @@
   <script>
   // Alle verfügbaren Objekte
   const objekte = [
-    // Immobilien werden hier eingefügt
+    {
+      id: 1, typ: 'gewerbe', vorhaben: 'kaufen', ort: 'lahn-dill',
+      titel: 'Flexible Gewerbehalle in Bischoffen',
+      ort_text: 'Bischoffen, OT Niederweidbach',
+      preis: 165000, preis_text: '165.000 €',
+      badge: 'Neu', badgeClass: '',
+      bild: 'bilder/gewerbehalle-bischoffen/halle-01.jpg',
+      details: 'expose-4.html',
+      d1: '105 m² Nutzfläche', d2: '710 m² Grundstück', d3: 'Bürocontainer'
+    }
   ];
 
   function renderKarte(obj) {
@@ -161,9 +171,9 @@
           <h3>${obj.titel}</h3>
           <p class="listing-location">${obj.ort_text}</p>
           <div class="listing-details">
-            <span>${obj.zimmer} Zimmer</span>
-            <span>${obj.flaeche}</span>
-            <span>${obj.extra}</span>
+            <span>${obj.d1}</span>
+            <span>${obj.d2}</span>
+            <span>${obj.d3}</span>
           </div>
           <div class="listing-footer">
             <strong class="listing-price">${obj.preis_text}</strong>
