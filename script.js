@@ -101,19 +101,34 @@ document.querySelectorAll('.card, .listing-card, .testimonial, .prozess-step, .k
   observer.observe(el);
 });
 
-// Contact form
+// Contact form -> Formspree (AJAX)
 document.getElementById('kontaktForm').addEventListener('submit', (e) => {
   e.preventDefault();
-  const btn = e.target.querySelector('button[type="submit"]');
-  btn.textContent = '✓ Nachricht gesendet!';
-  btn.style.background = '#4caf82';
+  const form = e.target;
+  const btn = form.querySelector('button[type="submit"]');
+  const orig = btn.textContent;
   btn.disabled = true;
-  setTimeout(() => {
-    btn.textContent = 'Nachricht senden';
-    btn.style.background = '';
-    btn.disabled = false;
-    e.target.reset();
-  }, 4000);
+  btn.textContent = 'Wird gesendet…';
+  fetch(form.action, {
+    method: 'POST',
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  }).then((r) => {
+    if (r.ok) {
+      btn.textContent = '✓ Nachricht gesendet!';
+      btn.style.background = '#4caf82';
+      form.reset();
+      setTimeout(() => { btn.textContent = orig; btn.style.background = ''; btn.disabled = false; }, 5000);
+    } else {
+      btn.textContent = 'Fehler – bitte erneut versuchen';
+      btn.style.background = '#c0392b';
+      setTimeout(() => { btn.textContent = orig; btn.style.background = ''; btn.disabled = false; }, 4000);
+    }
+  }).catch(() => {
+    btn.textContent = 'Fehler – bitte erneut versuchen';
+    btn.style.background = '#c0392b';
+    setTimeout(() => { btn.textContent = orig; btn.style.background = ''; btn.disabled = false; }, 4000);
+  });
 });
 
 // Favorite button toggle

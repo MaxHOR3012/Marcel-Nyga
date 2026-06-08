@@ -630,29 +630,30 @@
         </div>
       </div>
       <div class="kontakt-form-wrap">
-        <form class="kontakt-form" id="kontaktForm">
+        <form class="kontakt-form" id="kontaktForm" action="https://formspree.io/f/mqeoqpge" method="POST">
           <h3>Kostenlose Erstberatung</h3>
+          <input type="hidden" name="_subject" value="Neue Kontaktanfrage – marcelnygaimmobilien.de" />
           <div class="form-row">
             <div class="form-group">
               <label for="vorname">Vorname</label>
-              <input type="text" id="vorname" placeholder="Max" required />
+              <input type="text" id="vorname" name="Vorname" placeholder="Max" required />
             </div>
             <div class="form-group">
               <label for="nachname">Nachname</label>
-              <input type="text" id="nachname" placeholder="Mustermann" required />
+              <input type="text" id="nachname" name="Nachname" placeholder="Mustermann" required />
             </div>
           </div>
           <div class="form-group">
             <label for="email">E-Mail</label>
-            <input type="email" id="email" placeholder="max@beispiel.de" required />
+            <input type="email" id="email" name="email" placeholder="max@beispiel.de" required />
           </div>
           <div class="form-group">
             <label for="telefon">Telefon (optional)</label>
-            <input type="tel" id="telefon" placeholder="+49 123 456 789" />
+            <input type="tel" id="telefon" name="Telefon" placeholder="+49 123 456 789" />
           </div>
           <div class="form-group">
             <label for="anliegen">Anliegen</label>
-            <select id="anliegen">
+            <select id="anliegen" name="Anliegen">
               <option>Ich möchte kaufen</option>
               <option>Ich möchte verkaufen</option>
               <option>Ich möchte mieten</option>
@@ -665,7 +666,7 @@
           </div>
           <div class="form-group">
             <label for="nachricht">Nachricht</label>
-            <textarea id="nachricht" rows="4" placeholder="Ihre Nachricht an Marcel Nyga…"></textarea>
+            <textarea id="nachricht" name="Nachricht" rows="4" placeholder="Ihre Nachricht an Marcel Nyga…"></textarea>
           </div>
           <label class="checkbox-label">
             <input type="checkbox" required />
