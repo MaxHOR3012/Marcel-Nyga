@@ -85,8 +85,9 @@
           <label>Ort / Region</label>
           <select name="ort" id="f-ort">
             <option value="">Alle Regionen</option>
-            <option value="lahn-dill">Lahn-Dill-Kreis &amp; Umgebung</option>
-            <option value="rlp">Rheinland-Pfalz (Westerwald)</option>
+            <option value="hessen">Hessen</option>
+            <option value="nrw">Nordrhein-Westfalen</option>
+            <option value="rlp">Rheinland-Pfalz</option>
             <option value="mallorca">Mallorca</option>
           </select>
         </div>
@@ -151,7 +152,7 @@
   // Alle verfügbaren Objekte
   const objekte = [
     {
-      id: 1, typ: 'gewerbe', vorhaben: 'kaufen', ort: 'lahn-dill',
+      id: 1, typ: 'gewerbe', vorhaben: 'kaufen', ort: 'hessen',
       titel: 'Flexible Gewerbehalle in Bischoffen',
       ort_text: 'Bischoffen, OT Niederweidbach',
       preis: 165000, preis_text: '165.000 €',
@@ -161,7 +162,7 @@
       d1: '105 m² Nutzfläche', d2: '710 m² Grundstück', d3: 'Bürocontainer'
     },
     {
-      id: 2, typ: 'haus', vorhaben: 'kaufen', ort: 'lahn-dill',
+      id: 2, typ: 'haus', vorhaben: 'kaufen', ort: 'hessen',
       titel: 'Einfamilienhaus in Top-Lage von Herborn',
       ort_text: 'Herborn, Historische Altstadt',
       preis: 219000, preis_text: '219.000 €',
@@ -171,7 +172,7 @@
       d1: '135 m² Wohnfläche', d2: '4 Zimmer', d3: 'Fachwerk · denkmalgeschützt'
     },
     {
-      id: 3, typ: 'anlage', vorhaben: 'kaufen', ort: 'lahn-dill',
+      id: 3, typ: 'anlage', vorhaben: 'kaufen', ort: 'hessen',
       titel: 'Wohnportfolio: 20 Wohneinheiten (WEG-geteilt)',
       ort_text: 'Haiger',
       preis: 2539000, preis_text: '2.539.000 €',
@@ -181,7 +182,7 @@
       d1: '20 Wohneinheiten', d2: '1.593 m² Wohnfläche', d3: 'ca. 156.000 € Jahresmiete'
     },
     {
-      id: 4, typ: 'haus', vorhaben: 'kaufen', ort: 'lahn-dill',
+      id: 4, typ: 'haus', vorhaben: 'kaufen', ort: 'hessen',
       titel: 'Mehrfamilienhaus in bester Lage – Herborn-Burg',
       ort_text: 'Herborn-Burg',
       preis: 1095000, preis_text: '1.095.000 €',
@@ -191,7 +192,7 @@
       d1: '423 m² Wohnfläche', d2: '4 Wohneinheiten', d3: '1.062 m² Grundstück'
     },
     {
-      id: 5, typ: 'haus', vorhaben: 'kaufen', ort: 'lahn-dill',
+      id: 5, typ: 'haus', vorhaben: 'kaufen', ort: 'hessen',
       titel: 'Großes Anwesen mit vielen Möglichkeiten im Grünen',
       ort_text: 'Ehringshausen, OT Katzenfurt',
       preis: 499000, preis_text: '499.000 €',
@@ -201,7 +202,7 @@
       d1: '230 m² Wohnfläche', d2: '10 Zimmer', d3: '3.728 m² Grundstück'
     },
     {
-      id: 6, typ: 'haus', vorhaben: 'kaufen', ort: 'lahn-dill',
+      id: 6, typ: 'haus', vorhaben: 'kaufen', ort: 'hessen',
       titel: 'Tolles Einfamilienhaus mit viel Platz und Möglichkeiten',
       ort_text: 'Breitscheid, OT Erdbach',
       preis: 349000, preis_text: '349.000 €',
@@ -211,7 +212,7 @@
       d1: '222 m² Wohnfläche', d2: '9 Zimmer', d3: '1.006 m² Grundstück'
     },
     {
-      id: 7, typ: 'haus', vorhaben: 'kaufen', ort: 'lahn-dill',
+      id: 7, typ: 'haus', vorhaben: 'kaufen', ort: 'hessen',
       titel: 'Charmante Doppelhaushälfte in Niederscheld',
       ort_text: 'Dillenburg, OT Niederscheld',
       preis: 135000, preis_text: '135.000 €',
@@ -231,7 +232,7 @@
       d1: '80 m² Wohnfläche', d2: '4 Zimmer', d3: 'Garage'
     },
     {
-      id: 9, typ: 'haus', vorhaben: 'kaufen', ort: 'lahn-dill',
+      id: 9, typ: 'haus', vorhaben: 'kaufen', ort: 'hessen',
       titel: 'Ihr neues Eigenheim mit Garten in Mademühlen',
       ort_text: 'Driedorf, OT Mademühlen',
       preis: 195000, preis_text: '195.000 €',
@@ -241,7 +242,7 @@
       d1: '92 m² Wohnfläche', d2: '5 Zimmer', d3: '620 m² Grundstück'
     },
     {
-      id: 10, typ: 'anlage', vorhaben: 'kaufen', ort: 'lahn-dill',
+      id: 10, typ: 'anlage', vorhaben: 'kaufen', ort: 'hessen',
       titel: 'INVEST Mehrfamilienhaus in Eschenburg',
       ort_text: 'Eschenburg, OT Hirzenhain',
       preis: 569000, preis_text: '569.000 €',
@@ -251,7 +252,7 @@
       d1: '8 Wohneinheiten', d2: '408 m² Wohnfläche', d3: 'Pellet + PV'
     },
     {
-      id: 11, typ: 'haus', vorhaben: 'kaufen', ort: 'lahn-dill',
+      id: 11, typ: 'haus', vorhaben: 'kaufen', ort: 'hessen',
       titel: 'Einfamilienhaus in Herborn-Uckersdorf',
       ort_text: 'Herborn, OT Uckersdorf',
       preis: 195000, preis_text: '195.000 €',
@@ -261,7 +262,7 @@
       d1: '138 m² Wohnfläche', d2: '3 Zimmer', d3: 'Terrasse'
     },
     {
-      id: 12, typ: 'haus', vorhaben: 'kaufen', ort: 'lahn-dill',
+      id: 12, typ: 'haus', vorhaben: 'kaufen', ort: 'hessen',
       titel: 'Kleines charmantes EFH in Sinn OT mit Garten',
       ort_text: 'Sinn, OT Fleisbach',
       preis: 105000, preis_text: '105.000 €',
@@ -271,7 +272,7 @@
       d1: '121 m² Wohnfläche', d2: '7 Zimmer', d3: 'Wintergarten'
     },
     {
-      id: 13, typ: 'haus', vorhaben: 'kaufen', ort: 'lahn-dill',
+      id: 13, typ: 'haus', vorhaben: 'kaufen', ort: 'hessen',
       titel: 'Familien aufgepasst: EFH mit Garten in Aßlar OT',
       ort_text: 'Aßlar, OT Werdorf',
       preis: 239000, preis_text: '239.000 €',
