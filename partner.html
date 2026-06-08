@@ -13,6 +13,13 @@
       font-weight: 700;
       letter-spacing: 0.01em;
     }
+    /* Plattform-Logos auf hellem Chip (gute Lesbarkeit auf dunkler Karte) */
+    .logo-chip {
+      background: #fff; border-radius: 6px; padding: 14px 16px;
+      display: flex; align-items: center; justify-content: center;
+      min-height: 72px; margin-bottom: 6px;
+    }
+    .logo-chip img { max-height: 44px; width: auto; max-width: 100%; display: block; }
     /* Aufklappbare "Über mich"-Section (Elias) */
     .elias-bio { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--border); }
     .elias-bio summary {
@@ -118,12 +125,12 @@
       <h3 class="gruppe-titel" style="margin-top: 40px;">Meine Immobilien auf Plattformen</h3>
       <div class="cards-grid cards-grid--2x2 platform-grid">
         <a class="card card--hell" href="https://www.immobilienscout24.de/anbieter/profil/marcel-nyga-immobilienmanagement/marcel-nyga" target="_blank" rel="noopener">
-          <h3>ImmoScout24</h3>
+          <div class="logo-chip"><img src="immoscout24.png" alt="ImmoScout24" /></div>
           <p>Alle meine aktuellen Angebote auf ImmoScout24 ansehen.</p>
           <span class="card-link">Zu den Immobilien →</span>
         </a>
         <a class="card card--hell" href="https://www.kleinanzeigen.de/pro/marcelnygaimmobilienmanagement" target="_blank" rel="noopener">
-          <h3>Kleinanzeigen Immobilien</h3>
+          <div class="logo-chip"><img src="logo-kleinanzeigen-horizontal.svg" alt="Kleinanzeigen" /></div>
           <p>Meine Inserate bei Kleinanzeigen Immobilien entdecken.</p>
           <span class="card-link">Zu den Immobilien →</span>
         </a>
