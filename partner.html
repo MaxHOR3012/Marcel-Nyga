@@ -27,6 +27,10 @@
     .elias-bio .bio-arrow { display: inline-block; transition: transform var(--transition); font-size: 0.9rem; }
     .elias-bio[open] .bio-arrow { transform: rotate(90deg); }
     .elias-bio p { color: var(--text-light); font-size: 0.85rem; line-height: 1.7; margin: 12px 0 0; }
+    /* Kooperationspartner: gleich hoch (eingeklappt), aber rechts wächst beim Ausklappen NICHT mit */
+    .koop-grid { align-items: start; }
+    .koop-grid > .card { min-height: 220px; }
+    .koop-grid > a.card .card-link { margin-top: auto; }
   </style>
 </head>
 <body>
@@ -137,7 +141,7 @@
 
       <!-- Kooperationspartner -->
       <h3 class="gruppe-titel" style="margin-top: 64px;">Kooperationspartner</h3>
-      <div class="cards-grid cards-grid--2x2" style="align-items: stretch;">
+      <div class="cards-grid cards-grid--2x2 koop-grid">
         <div class="card" style="text-align: left;">
           <div style="display: flex; align-items: center; gap: 18px;">
             <div role="img" aria-label="Elias Schlabach" style="width: 84px; height: 84px; border-radius: 50%; background-image: url('elias-schlabach.jpg'); background-size: auto 140%; background-position: 40% 18%; background-repeat: no-repeat; flex-shrink: 0; border: 2px solid var(--gold);"></div>
