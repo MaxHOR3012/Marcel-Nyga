@@ -13,6 +13,20 @@
       font-weight: 700;
       letter-spacing: 0.01em;
     }
+    /* Aufklappbare "Über mich"-Section (Elias) */
+    .elias-bio { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--border); }
+    .elias-bio summary {
+      list-style: none; cursor: pointer; user-select: none;
+      font-family: var(--font-heading); font-size: 0.65rem; font-weight: 800;
+      text-transform: uppercase; letter-spacing: 0.18em; color: var(--gold);
+      display: flex; align-items: center; gap: 8px;
+      transition: color var(--transition);
+    }
+    .elias-bio summary::-webkit-details-marker { display: none; }
+    .elias-bio summary:hover { color: var(--gold-dark, #a87d35); }
+    .elias-bio .bio-arrow { display: inline-block; transition: transform var(--transition); font-size: 0.9rem; }
+    .elias-bio[open] .bio-arrow { transform: rotate(90deg); }
+    .elias-bio p { color: var(--text-light); font-size: 0.85rem; line-height: 1.7; margin: 12px 0 0; }
   </style>
 </head>
 <body>
@@ -132,13 +146,13 @@
               <p style="margin: 4px 0 0;">Verlässlicher Partner in meinem Netzwerk.</p>
             </div>
           </div>
-          <div style="margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--border);">
-            <span style="font-family: var(--font-heading); font-size: 0.65rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.18em; color: var(--gold); display: block; margin-bottom: 10px;">Über mich</span>
-            <p style="color: var(--text-light); font-size: 0.85rem; line-height: 1.7; margin: 0 0 10px;">Elias Schlabach ist gelernter Immobilienkaufmann (IHK) und zertifizierter Immobilienmakler (IHK). Seine Ausbildung absolvierte er bei der GEWOBAU – Gesellschaft für Wohnen und Bauen mbH sowie dem Spar- und Bauverein e.&nbsp;V. in Wetzlar, einem etablierten Wohnungsbauunternehmen, wo er umfassende Einblicke in die Immobilienwirtschaft und die professionelle Betreuung von Wohnimmobilien erhielt.</p>
-            <p style="color: var(--text-light); font-size: 0.85rem; line-height: 1.7; margin: 0 0 10px;">Nach erfolgreichem Abschluss seiner Ausbildung sammelte er weitere praktische Erfahrungen im Immobilienbereich und vertiefte sein Fachwissen durch die Weiterbildung zum zertifizierten Immobilienmakler (IHK). Anschließend war er als selbstständiger Bezirksleiter bei Wüstenrot Immobilien tätig und begleitete Eigentümer sowie Kaufinteressenten bei der erfolgreichen Vermittlung von Wohnimmobilien.</p>
-            <p style="color: var(--text-light); font-size: 0.85rem; line-height: 1.7; margin: 0 0 10px;">Seit Juni 2025 ist Elias Schlabach nun als selbstständiger Immobilienmakler tätig und unterstützt unter anderem das Team von Marcel Nyga Immobilienmanagement in Herborn. Sein Schwerpunkt liegt auf einer persönlichen, transparenten und professionellen Kundenbetreuung – von der ersten Beratung über die Immobilienbewertung bis hin zum erfolgreichen Verkauf.</p>
-            <p style="color: var(--text-light); font-size: 0.85rem; line-height: 1.7; margin: 0;">Durch seine Ausbildung in der Wohnungswirtschaft, seine Maklerqualifikation und seine praktische Erfahrung steht er seinen Kunden als kompetenter Ansprechpartner rund um die Immobilie zur Seite.</p>
-          </div>
+          <details class="elias-bio">
+            <summary>Über mich <span class="bio-arrow">›</span></summary>
+            <p>Elias Schlabach ist gelernter Immobilienkaufmann (IHK) und zertifizierter Immobilienmakler (IHK). Seine Ausbildung absolvierte er bei der GEWOBAU – Gesellschaft für Wohnen und Bauen mbH sowie dem Spar- und Bauverein e.&nbsp;V. in Wetzlar, einem etablierten Wohnungsbauunternehmen, wo er umfassende Einblicke in die Immobilienwirtschaft und die professionelle Betreuung von Wohnimmobilien erhielt.</p>
+            <p>Nach erfolgreichem Abschluss seiner Ausbildung sammelte er weitere praktische Erfahrungen im Immobilienbereich und vertiefte sein Fachwissen durch die Weiterbildung zum zertifizierten Immobilienmakler (IHK). Anschließend war er als selbstständiger Bezirksleiter bei Wüstenrot Immobilien tätig und begleitete Eigentümer sowie Kaufinteressenten bei der erfolgreichen Vermittlung von Wohnimmobilien.</p>
+            <p>Seit Juni 2025 ist Elias Schlabach nun als selbstständiger Immobilienmakler tätig und unterstützt unter anderem das Team von Marcel Nyga Immobilienmanagement in Herborn. Sein Schwerpunkt liegt auf einer persönlichen, transparenten und professionellen Kundenbetreuung – von der ersten Beratung über die Immobilienbewertung bis hin zum erfolgreichen Verkauf.</p>
+            <p>Durch seine Ausbildung in der Wohnungswirtschaft, seine Maklerqualifikation und seine praktische Erfahrung steht er seinen Kunden als kompetenter Ansprechpartner rund um die Immobilie zur Seite.</p>
+          </details>
         </div>
         <div class="card">
           <h3>Winkler Baufinanzierung</h3>
