@@ -124,6 +124,9 @@
   .gallery-main { height: 340px; }
 }
 @media (max-width: 600px) {
-  .gallery-thumbs { display: none; }
+  .gallery-main { height: 240px; min-height: 240px; }
+  /* Thumbnails auf dem Handy NICHT ausblenden, sondern horizontal scrollbar machen */
+  .gallery-thumbs { display: flex; gap: 4px; overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 4px; }
+  .gallery-thumb { flex: 0 0 72px; height: 54px; opacity: 0.85; }
   .expose-kenndaten { grid-template-columns: repeat(2, 1fr); }
 }
