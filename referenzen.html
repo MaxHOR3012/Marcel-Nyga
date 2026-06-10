@@ -221,8 +221,8 @@
   <script>
     // Videos automatisch aus dem Ordner laden
     const videoFiles = [
-      { file: 'Video-Sinn-2.mov', titel: 'Sinn', ort: 'Hessen', typ: 'Referenz' },
-      { file: 'Immovideo-Uckersdorf-1.mov', titel: 'Uckersdorf', ort: 'Hessen', typ: 'Referenz' },
+      { file: 'Video-Sinn-2.mp4', titel: 'Sinn', ort: 'Hessen', typ: 'Referenz' },
+      { file: 'Immovideo-Uckersdorf-1.mp4', titel: 'Uckersdorf', ort: 'Hessen', typ: 'Referenz' },
     ];
 
     const grid = document.getElementById('videoGrid');
@@ -235,7 +235,7 @@
           <div class="video-card">
             <div class="video-wrap">
               <video controls autoplay muted loop playsinline preload="auto">
-                <source src="${v.file}" type="video/quicktime">
+                <source src="${v.file}" type="video/mp4">
                 <source src="${v.file}" type="video/mp4">
               </video>
             </div>
